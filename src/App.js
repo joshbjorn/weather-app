@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   getWeather = async (location) => {
-    let response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=177d6d27801e937fa431c833a1fa8013', {mode: 'cors'});
+    let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=177d6d27801e937fa431c833a1fa8013', {mode: 'cors'});
     let weather = await response.json(); 
     if (weather.cod === 200){
       this.processWeather(weather);
